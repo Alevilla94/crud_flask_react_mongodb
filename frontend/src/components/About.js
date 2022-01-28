@@ -1,0 +1,9 @@
+import React, { Fragment } from "react";
+
+export const About = () => (
+    <Fragment>
+        <h1>ABOUT</h1>
+        <br />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis aut esse aspernatur quod molestiae adipisci ratione nesciunt alias impedit, temporibus magnam, iusto similique! Repudiandae sequi dolorum reprehenderit vel iste dignissimos, natus a eum consequatur suscipit veniam! Odit amet, rerum libero ex exercitationem recusandae nisi consequatur possimus est esse ducimus ratione quod, impedit necessitatibus voluptatibus, ipsam vero suscipit aliquid? Quos error voluptatum recusandae dolore optio vitae autem eligendi ratione quisquam aut dolor odit velit, ex esse nostrum totam asperiores quasi consequatur pariatur aperiam a libero consectetur reiciendis! Non modi magni animi, aliquid expedita earum voluptas aspernatur nam pariatur quam iusto, voluptates deleniti! Numquam quidem beatae, possimus soluta qui, eveniet libero omnis eligendi fugit eum non commodi, repellendus iste in amet pariatur! Dolore molestias dolor consequatur cumque at nisi velit quibusdam saepe error iure labore, corporis temporibus eligendi ipsum eveniet officiis quae. Debitis earum vitae culpa aliquam aspernatur assumenda commodi vel eum fugiat, ad, tenetur veritatis rerum? Ea in vero quam quaerat earum doloremque unde, modi saepe atque optio ratione illum quis voluptates mollitia dolor accusamus? Voluptatum consequatur sed deleniti, qui, itaque, natus obcaecati facilis expedita voluptas perferendis minus nisi voluptate quia! Exercitationem dolorum ipsa non repellat officiis error numquam! Fugiat, officiis.</p>
+    </Fragment>
+)

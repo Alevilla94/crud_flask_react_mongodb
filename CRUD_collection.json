@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "d18266fc-0cae-49b2-a6b9-f324f281f105",
+		"name": "CRUD",
+		"description": "CRUD realizado con Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agregar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ingrese nombre\",\r\n    \"profession\":\"Ingrese profesion\",\r\n    \"rol\":\"Ingre el puesto\",\r\n    \"tecnology\":\"Ingrese la Tecnologia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Para agregar usuario se debe completar los campos:\n\nName: Nombre de la persona a agregar\n\nProfession: Profesion\n\nRol: Que rol ocupara en la empresa\n\nTecnologia: Tipo de tecnologia que empleará"
+			},
+			"response": [
+				{
+					"name": "Agregar Usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan Perez\",\r\n    \"profession\": \"Diseñador\",\r\n    \"rol\": \"Frontend\",\r\n    \"tecnology\": \"React\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"_id\": {\n        \"$oid\": \"61f3edc208a22635784f68b5\"\n    },\n    \"name\": [\n        \"Ingrese nombre\"\n    ],\n    \"profession\": [\n        \"Ingrese profesion\"\n    ],\n    \"rol\": [\n        \"Ingre el puesto\"\n    ],\n    \"tecnology\": \"Ingrese la Tecnologia\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Ver todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Se listara todos los usuarios generados hasta el momento"
+			},
+			"response": [
+				{
+					"name": "Ver todos los usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": {\n            \"$oid\": \"61f3ef6c08a22635784f68b6\"\n        },\n        \"name\": [\n            \"Marcos Garcia\"\n        ],\n        \"profession\": [\n            \"Ingeniero en sistemas\"\n        ],\n        \"rol\": [\n            \"Backendo\"\n        ],\n        \"tecnology\": \"Laravel\"\n    },\n    {\n        \"_id\": {\n            \"$oid\": \"61f3efa408a22635784f68b7\"\n        },\n        \"name\": [\n            \"Juan Perez\"\n        ],\n        \"profession\": [\n            \"Diseñador\"\n        ],\n        \"rol\": [\n            \"Frontend\"\n        ],\n        \"tecnology\": \"React\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Ver un usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/user/id?id={{id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{id}}",
+							"description": "Ingresar ID del usuario que se busca"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "En esta request se muestra los datos de un ID alamacenado en la base de datos"
+			},
+			"response": [
+				{
+					"name": "Ver un usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/user/61f3efa408a22635784f68b7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"61f3efa408a22635784f68b7"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"_id\": {\r\n        \"$oid\": \"61f3efa408a22635784f68b7\"\r\n    },\r\n    \"name\": [\r\n        \"Juan Perez\"\r\n    ],\r\n    \"profession\": [\r\n        \"Diseñador\"\r\n    ],\r\n    \"rol\": [\r\n        \"Frontend\"\r\n    ],\r\n    \"tecnology\": \"React\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Actualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ingrese nombre a actualizar\",\r\n    \"profession\":\"Ingrese profesion a actualizar\",\r\n    \"rol\":\"Ingre el puesto a actualizar\",\r\n    \"tecnology\":\"Ingrese la Tecnologia a actualizar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/?={{id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "{{id}}",
+							"description": "Ingresar id para actualizar"
+						}
+					]
+				},
+				"description": "Se actualiza uno o mas parametros deseados"
+			},
+			"response": [
+				{
+					"name": "Actualizar usuario",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Juan Perez\",\r\n    \"profession\":\"Diseñador\",\r\n    \"rol\":\"Backend\",\r\n    \"tecnology\":\"Nodejs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/61f3efa408a22635784f68b7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"61f3efa408a22635784f68b7"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"_id\": {\r\n        \"$oid\": \"61f3efa408a22635784f68b7\"\r\n    },\r\n    \"name\": [\r\n        \"Juan Perez\"\r\n    ],\r\n    \"profession\": [\r\n        \"Diseñador\"\r\n    ],\r\n    \"rol\": [\r\n        \"Backend\"\r\n    ],\r\n    \"tecnology\": \"Nodejs\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Eliminar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/?={{id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "{{id}}",
+							"description": "Ingresar id a eliminar"
+						}
+					]
+				},
+				"description": "Se elimina de la base de datos el usuario ingresado por id"
+			},
+			"response": [
+				{
+					"name": "Eliminar Usuario",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/61f3efa408a22635784f68b7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"61f3efa408a22635784f68b7"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"msg\": \"User 61f3efa408a22635784f68b7 was Deleted successfully\"\r\n}"
+				}
+			]
+		}
+	]
+}
